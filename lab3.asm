@@ -11,7 +11,7 @@ Main PROC
     mov esi, 0;
     mov al, 9; initialize al
 
-L1: mov byte[esi], al;
+L1: mov Result[esi], al;
     add al, 9; accumulating the value 9, 18, 27, ...
     inc esi ; incrementing the index
     loop L1 ; looping
