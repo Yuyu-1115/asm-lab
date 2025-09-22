@@ -1,6 +1,8 @@
 TITLE HW1 Arithmetics
 INCLUDE Irvine32.inc
 
+main EQU start@0
+
 .data
     MyID DWORD ?
     Digit0 BYTE 2h
@@ -9,6 +11,7 @@ INCLUDE Irvine32.inc
     Digit3 BYTE 7h
 
 .code
+
 main PROC
     movzx eax, Digit0; Moving the first digit to eax to fit DWORD
     shl eax, 24; Shift to the first 8 bit of eax
