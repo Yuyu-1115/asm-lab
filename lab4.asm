@@ -22,7 +22,7 @@ main PROC
 exit
 main ENDP
 
-Convert PROC USES eax	;
+Convert PROC USES eax ebx ecx edx	;
 L1:
 	mov al,[esi];
     sub al,'0';
