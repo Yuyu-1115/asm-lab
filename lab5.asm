@@ -2,10 +2,10 @@ TITLE Lab5
 INCLUDE  Irvine32.inc
 main EQU start@0
 .data
-    myID byte "113502017" ,0
-    myID2 byte "113502023" ,0
-    size_ID dword 9 
-    result byte 9 DUP(?)
+    myID byte "13502017" ,0
+    myID2 byte "13502023" ,0
+    size_ID dword 8
+    result byte 8 DUP(?)
 
 .Code
 main PROC

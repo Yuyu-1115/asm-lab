@@ -23,10 +23,10 @@ L2:
     inc esi; increment the index
 
     loop L2; loop from 1 to 9
-    cmp bh, 9; if 
-    jb L1; when bh < 9, the iteration hasn't end;
-    je RES
-
+    mov ecx, 10
+    movzx edx, bh; align with register size
+    sub ecx, edx; ecx = 10 - bh
+    loop L1
 RES:
     exit
 main ENDP
