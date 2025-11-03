@@ -14,7 +14,7 @@ main EQU start@0
 
 ExitProcess proto, dwExitCode: dword
 
-DifferentInputs proto, v1: 104522064, v2: 113502017, v3: 113502023
+DifferentInputs proto, v1: dword, v2: dword, v3: dword
 
 
 .data
