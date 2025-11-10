@@ -27,7 +27,7 @@ main PROC
 	exit
 main ENDP
 
-CountMatches PROC USES ebx esi edi,
+CountMatches PROC USES ebx ecx esi edi,
 	ary1: PTR SDWORD,
 	ary2: PTR SDWORD,
 	aSize: DWORD
@@ -53,7 +53,7 @@ NOT_EQUAL:
 
 CountMatches ENDP
 
-CountMatchesExtra PROC USES ebx edx esi edi,
+CountMatchesExtra PROC USES ebx ecx edx esi edi,
 	ary1: PTR SDWORD,
 	ary2: PTR SDWORD,
 	aSize: DWORD
