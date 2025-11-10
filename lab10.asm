@@ -22,7 +22,7 @@ main PROC
 
     INVOKE Str_copyN,        ; copy string_1 to string_2
       OFFSET string_1,        
-      OFFSET string_2,     
+      OFFSET string_2 + SIZEOF string_2 - 1,     
       (SIZEOF string_1) - 1  ; save space for null byte
 
  
@@ -56,21 +56,21 @@ Str_copyN PROC USES eax ecx esi edi,
 
  
 
-    mov ecx, LENGTHOF source       ; set counter for REP
+    mov ecx, maxChars       ; set counter for REP
 
     mov esi, source       ; assign source
 
-    mov edi, target + LENGTHOF target       ; assign target
+    mov edi, target         ; assign target
 
     cld                 ; clear direction flag (direction = forward)
 
     rep movsb           ; copy the string
 
-    mov [esi], 0            ; set null byte to register
+    mov al, 0            ; set null byte to register
 
-    movsb               ; append null byte
+    stosb               ; append null byte
 
-    ret 12            ; clear data in stack
+    ret             ; clear data in stack
 
 Str_copyN ENDP
 
