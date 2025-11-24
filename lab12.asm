@@ -40,7 +40,7 @@ main PROC
 	   ADDR boxTop,	; pointer to the top box line
 	   boxWidth,	; size of box line
 	   xyPosition,	; coordinates of first char
-	   ADDR count	; output count
+	   ADDR bytesWritten	; output count
 
 	inc xyPosition.y	; next line
 
@@ -61,7 +61,7 @@ L1:	push ecx	; save counter
 	   ADDR boxBody,	; pointer to the box body
 	   boxWidth,	; size of box line
 	   xyPosition,	; coordinates of first char
-	   ADDR count	; output count
+	   ADDR bytesWritten	; output count
 
 	inc xyPosition.y	; next line
 	pop ecx	; restore counter
@@ -80,7 +80,7 @@ L1:	push ecx	; save counter
 	   ADDR boxBottom,	; pointer to the bottom of the box
 	   boxWidth,	; size of box line
 	   xyPosition,	; coordinates of first char
-	   ADDR count	; output count
+	   ADDR bytesWritten	; output count
 
 	   call WaitMsg
 	   call Clrscr
