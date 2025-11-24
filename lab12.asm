@@ -33,7 +33,7 @@ main PROC
 	  ADDR attributes0,
 	  boxWidth, 
 	  xyPosition,
-	  ADDR count
+	  ADDR cellsWritten
 
 	INVOKE WriteConsoleOutputCharacter,
 	   outputHandle,	; console output handle
@@ -53,7 +53,7 @@ L1:	push ecx	; save counter
 	  ADDR attributes1,
 	  boxWidth, 
 	  xyPosition,
-	  ADDR count
+	  ADDR cellsWritten
 
 
 	INVOKE WriteConsoleOutputCharacter,
@@ -73,7 +73,7 @@ L1:	push ecx	; save counter
 	  ADDR attributes2,
 	  boxWidth, 
 	  xyPosition,
-	  ADDR count
+	  ADDR cellsWritten
 	  	
 	INVOKE WriteConsoleOutputCharacter,
 	   outputHandle,	; console output handle
